@@ -1,0 +1,20 @@
+export const esp = {
+    titulo: 'Aplicacion React Español',
+    login: 'Usuario (Email)',
+    contra: 'Contraseña',
+    botonLogin: 'Acceder',
+    errorLoginRequerido: 'Debes introducir el login',
+    errorLoginFormato: 'El valor introducido no tiene el formato correcto',
+    errorPasswordRequerido: 'Debes introducir la contraseña',
+    loginErrorUsuario: 'Usuario o contraseña incorrectos',
+    loginErrorServidor: 'No se ha podido realizar la operación, inténtalo más tarde',
+    loginErrorRed: 'No se ha podido realizar la operación, comprueba la conexión a internet',
+    wellcomeTitulo: '¡Bienvenido!',
+    wellcomeTexto: 'La última vez que accediste fue',
+    wellcomeSalir: 'Desconectar',
+    wellcomeFecha0: 'Días',
+    wellcomeFecha1: 'Horas',
+    wellcomeFecha2: 'Minutos',
+    wellcomeFecha3: 'Segundos',
+
+}

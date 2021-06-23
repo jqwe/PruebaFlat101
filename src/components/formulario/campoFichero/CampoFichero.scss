@@ -1,0 +1,72 @@
+@import "../../../globalCSS/Constants.scss";
+
+.react-campoFichero {
+    width: 100%;
+    
+    input {
+        display: none;
+        
+    }
+       
+    .react-campoFichero-grupo {
+        label {
+            color:$black;
+            font-size: $font-size-base;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .react-campoFichero-grupo-label {            
+            border: 1px solid #ccc;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .react-campoFichero-grupo-label-modificar {
+
+        }
+
+        .react-campoFichero-grupo-input {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            /* @include flex__start-center; */
+
+            .newInputUINormal {
+                /* border: 1px solid $grayMediumTwoColor; */
+                background: $white;
+                border-radius: 2px;
+                padding: 10px 32px 10px 10px;
+                width: 100%;
+                margin: 0;
+                /* height: 48px; */
+                color:$black;
+                font-size: $font-size-base;
+                border: 0px;
+                border-bottom: 1px solid #000;                
+            }
+            
+        }        
+        
+    }
+
+    .react-campoFichero-grupo.errorCampo {
+        .react-campoFichero-grupo-input {           
+            .newInputUINormal {
+                    background: rgba(224,62,82,0.15);
+                    border: 1px solid $errorColor;
+                }           
+        }
+    }
+
+    .campo__Disabled.react-campoFichero-grupo-input {
+        .newInputUINormal {
+            background-color: $grayColorLight;
+            cursor: not-allowed;
+        }
+    }
+    
+}
