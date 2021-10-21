@@ -1,0 +1,25 @@
+@import '../../../../globalCSS/Constants.scss';
+
+.react-fieldError {
+    width: 100%;
+    margin-top: 4px;
+   
+    .react-fieldError__message {
+        color:  $errorColor;
+        font-size: $font-size-base;
+        line-height: 14px;
+        margin: 0px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 12px;
+        text-align: left;        
+    }
+}
+
+.errorField {
+    input, select {
+        background-color: rgba(224,62,82,0.15);
+        border: 1px solid $errorColor;
+    }
+}

@@ -1,0 +1,21 @@
+@import "../../globalCSS/Constants.scss";
+
+.spa-table-circle {
+    border: 1px solid #ffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    .spa-dont-like {
+        color: #ddd;
+    }   
+    
+}

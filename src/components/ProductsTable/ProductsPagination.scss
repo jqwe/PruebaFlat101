@@ -1,0 +1,18 @@
+.spa-pagination-products-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0px;
+
+    .spa-pagination-products-item {
+        margin-right: 12px;
+        font-size: 14px;
+        cursor: pointer;
+
+        &.selected {
+            font-weight: bold;
+        }
+    }
+}

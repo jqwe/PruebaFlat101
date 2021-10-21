@@ -1,11 +1,10 @@
 import React, {createContext, useReducer} from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import CargaProductos from './components/CargaProductos/CargaProductos';
-import ListadoProductos from './components/ListadoProductos/ListadoProductos';
-import PaginaNoEncontrada from './components/PaginaNoEncontrada/PaginaNoEncontrada';
-import {storeInicial} from './models/storeInicial';
-import {reducer} from './reducers/reducer';
+import LoadProduct from './components/LoadProduct/LoadProduct';
+import ProductsList from './components/ProductsList/ProductsList';
+import PageNotFound from './components/PageNotFound/PageNotFound';
+
 import './App.scss';
 
 /**
@@ -15,33 +14,19 @@ Si el usuario se autentifica correctamente se muestra el tiempo trasncurrido des
 
 function App() {
   
-  const AppContext = createContext();  
   
-  const AppContextProvider = props => {
-           
-    const [state, dispatch] = useReducer(reducer, storeInicial);
-    return (
-        <AppContext.Provider value={{ state, dispatch }}>
-            {props.children}
-        </AppContext.Provider>
-    );
-};   
-
-return <>
-    <AppContextProvider >
+return <>    
       <Router>
           <Switch>
             <Route exact path="/">
-              <CargaProductos contexto={AppContext}/>
+              <LoadProduct />
             </Route>
             <Route exact path="/listado">
-              <ListadoProductos contexto={AppContext}/>
+              <ProductsList />
             </Route>
-            <Route component={PaginaNoEncontrada} />
+            <Route component={PageNotFound} />
           </Switch>
-        </Router>      
-       
-    </AppContextProvider>
+        </Router>   
 </> 
 }
 export default App;
